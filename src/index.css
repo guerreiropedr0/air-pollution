@@ -7,7 +7,11 @@
   --secondary-blue-color: #3f62a4;
   --white-color: #fff;
   --lato-font: 'Lato', sans-serif;
-  --gill-sans-font: 'Gill Sans', 'Gill Sans MT', calibri, 'Trebuchet MS',
+  --gill-sans-font:
+    'Gill Sans',
+    'Gill Sans MT',
+    calibri,
+    'Trebuchet MS',
     sans-serif;
 }
 

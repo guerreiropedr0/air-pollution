@@ -35,10 +35,17 @@ small {
 
 .regions li {
   width: 100%;
-  padding: 1.5rem;
   text-align: center;
   box-shadow: 0 0 0 1px var(--white-color);
-  cursor: pointer;
+  position: relative;
+}
+
+.regions li button {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  background-color: transparent;
+  font-size: 1rem;
 }
 
 .regions li:nth-child(4n + 1),
@@ -46,8 +53,11 @@ small {
   background-color: var(--secondary-pink-color);
 }
 
-.regions li p,
 .regions li small {
-  background-color: inherit;
+  background-color: transparent;
   pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

@@ -47,11 +47,13 @@ const Home = () => {
       </ul>
       <ul className={styles.regions}>
         {regions.map((region) => (
-          <li
-            key={region}
-            onClick={(event) => handleClick(event.target.children[0].textContent)}
-          >
-            <p>{region}</p>
+          <li key={region}>
+            <button
+              type="button"
+              onClick={(event) => handleClick(event.target.textContent)}
+            >
+              {region}
+            </button>
             <small>42 countries</small>
           </li>
         ))}
