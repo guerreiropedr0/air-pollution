@@ -7,25 +7,25 @@ const Continents = () => {
   const state = useSelector((state) => state.allReducer.countries);
 
   const europeCountries = state.filter(
-    ({ continents }) => continents === 'Europe',
+    ({ continents }) => continents === 'Europe'
   );
 
   const asiaCountries = state.filter(({ continents }) => continents === 'Asia');
 
   const southAmericaCountries = state.filter(
-    ({ continents }) => continents === 'South America',
+    ({ continents }) => continents === 'South America'
   );
 
   const northAmericaCountries = state.filter(
-    ({ continents }) => continents === 'North America',
+    ({ continents }) => continents === 'North America'
   );
 
   const africaCountries = state.filter(
-    ({ continents }) => continents === 'Africa',
+    ({ continents }) => continents === 'Africa'
   );
 
   const oceaniaCountries = state.filter(
-    ({ continents }) => continents === 'Oceania',
+    ({ continents }) => continents === 'Oceania'
   );
 
   const continentsNumbers = [
@@ -65,7 +65,7 @@ const Continents = () => {
     },
     {
       path: '/oceania',
-      text: 'Ocenia',
+      text: 'Oceania',
       id: 5,
     },
   ];
@@ -86,11 +86,7 @@ const Continents = () => {
           >
             {text}
           </NavLink>
-          <small>
-            {continentsNumbers[id]}
-            {' '}
-            countries
-          </small>
+          <small>{continentsNumbers[id]} countries</small>
         </li>
       ))}
     </ul>
