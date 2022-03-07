@@ -58,14 +58,14 @@ export const continentReducer = (
   }
 };
 
-const fetchContinent = (region) => async (dispatch) => {
+const fetchContinent = (continent) => async (dispatch) => {
   dispatch(fetchContinentRequest());
   const request = await fetch(
-    `https://restcountries.com/v3.1/region/${region}`,
+    `https://restcountries.com/v3.1/region/${continent}`,
   );
   try {
-    const regions = await request.json();
-    dispatch(fetchContinentSuccess(regions));
+    const continents = await request.json();
+    dispatch(fetchContinentSuccess(continents));
   } catch (error) {
     const errorMsg = error.message;
     dispatch(fetchContinentFailure(errorMsg));

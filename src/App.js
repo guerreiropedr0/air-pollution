@@ -1,15 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
 import Home from './modules/Home/Home';
 import Navbar from './modules/Navbar/Navbar';
-import Template from './modules/Template/Template';
-import Continents from './modules/Continents/Continents';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Template />
-      <Home />
-      <Continents />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
