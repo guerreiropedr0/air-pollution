@@ -1,0 +1,38 @@
+.regions {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 2px;
+}
+
+.regions li {
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  box-shadow: 0 0 0 2px var(--white-color);
+}
+
+.regions li button {
+  width: 100%;
+  padding: 1.5rem;
+  height: 100%;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+.regions li:nth-child(4n + 1),
+.regions li:nth-child(4n + 2) {
+  background-color: var(--secondary-pink-color);
+}
+
+.regions li small {
+  background-color: transparent;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}

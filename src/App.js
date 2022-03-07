@@ -1,6 +1,7 @@
 import Home from './modules/Home/Home';
 import Navbar from './modules/Navbar/Navbar';
 import Template from './modules/Template/Template';
+import Regions from './modules/Regions/Regions';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Template />
       <Home />
+      <Regions />
     </div>
   );
 }

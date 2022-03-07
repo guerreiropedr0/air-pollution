@@ -37,7 +37,7 @@ export const regionReducer = (
       return {
         ...state,
         loading: false,
-        countries: payload,
+        countries: payload.map((c) => [c.latlng, c.name, { region: c.region }]),
         error: '',
       };
 
@@ -60,8 +60,8 @@ const fetchRegion = (region) => async (dispatch) => {
     `https://restcountries.com/v3.1/region/${region}`,
   );
   try {
-    const missions = await request.json();
-    dispatch(fetchRegionSuccess(missions));
+    const regions = await request.json();
+    dispatch(fetchRegionSuccess(regions));
   } catch (error) {
     const errorMsg = error.message;
     dispatch(fetchRegionFailure(errorMsg));

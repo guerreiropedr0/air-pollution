@@ -1,10 +1,8 @@
-.main {
-  padding: 0.5rem;
-}
-
 .title {
   font-size: 1.1rem;
   font-family: var(--gill-sans-font);
+  padding: 0 0.5rem;
+  background-color: var(--tertiary-pink-color);
 }
 
 .air-quality {
@@ -13,6 +11,7 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 0.5rem;
   justify-items: center;
+  padding: 0 0.5rem;
 }
 
 .air-quality p {
@@ -22,42 +21,4 @@
 
 small {
   opacity: 0.8;
-}
-
-.regions {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  border: 1px solid var(--white-color);
-  gap: 1px;
-}
-
-.regions li {
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 0 0 1px var(--white-color);
-  position: relative;
-}
-
-.regions li button {
-  width: 100%;
-  height: 100%;
-  padding: 1.5rem;
-  background-color: transparent;
-  font-size: 1rem;
-}
-
-.regions li:nth-child(4n + 1),
-.regions li:nth-child(4n + 2) {
-  background-color: var(--secondary-pink-color);
-}
-
-.regions li small {
-  background-color: transparent;
-  pointer-events: none;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
