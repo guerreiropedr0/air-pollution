@@ -14,7 +14,8 @@
   box-shadow: 0 0 0 2px var(--white-color);
 }
 
-.continents li button {
+.continents li a {
+  display: block;
   width: 100%;
   padding: 1.5rem;
   height: 100%;

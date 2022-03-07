@@ -14,12 +14,11 @@ const Home = () => {
             <p>{quality}</p>
             <small>
               Index:
-              {index + 1}
+              {` ${index + 1}`}
             </small>
           </li>
         ))}
       </ul>
-
       <Continents />
     </main>
   );
