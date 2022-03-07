@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import fetchRegion from '../../redux/countries/countries';
-import styles from './Regions.module.css';
+import fetchContinent from '../../redux/continents/continents';
+import styles from './Continents.module.css';
 
-const Regions = () => {
+const Continents = () => {
   const state = useSelector((state) => state.allReducer.countries);
 
   const europeCountries = state.filter(
@@ -47,12 +47,12 @@ const Regions = () => {
     'Oceania',
   ];
 
-  const handleClick = (region) => {
-    dispatch(fetchRegion(region));
+  const handleClick = (continent) => {
+    dispatch(fetchContinent(continent));
   };
 
   return (
-    <ul className={styles.regions}>
+    <ul className={styles.continents}>
       {continents.map((continent, index) => (
         <li key={continent}>
           <button
@@ -72,4 +72,4 @@ const Regions = () => {
   );
 };
 
-export default Regions;
+export default Continents;

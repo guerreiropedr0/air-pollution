@@ -1,4 +1,4 @@
-.regions {
+.continents {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -6,7 +6,7 @@
   gap: 2px;
 }
 
-.regions li {
+.continents li {
   width: 100%;
   text-align: center;
   position: relative;
@@ -14,7 +14,7 @@
   box-shadow: 0 0 0 2px var(--white-color);
 }
 
-.regions li button {
+.continents li button {
   width: 100%;
   padding: 1.5rem;
   height: 100%;
@@ -22,12 +22,12 @@
   font-size: 0.9rem;
 }
 
-.regions li:nth-child(4n + 1),
-.regions li:nth-child(4n + 2) {
+.continents li:nth-child(4n + 1),
+.continents li:nth-child(4n + 2) {
   background-color: var(--secondary-pink-color);
 }
 
-.regions li small {
+.continents li small {
   background-color: transparent;
   pointer-events: none;
   position: absolute;

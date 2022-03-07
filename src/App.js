@@ -1,7 +1,7 @@
 import Home from './modules/Home/Home';
 import Navbar from './modules/Navbar/Navbar';
 import Template from './modules/Template/Template';
-import Regions from './modules/Regions/Regions';
+import Continents from './modules/Continents/Continents';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Template />
       <Home />
-      <Regions />
+      <Continents />
     </div>
   );
 }
