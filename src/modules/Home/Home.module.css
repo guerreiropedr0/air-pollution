@@ -1,0 +1,25 @@
+.main {
+  padding: 0.5rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-family: var(--gill-sans-font);
+}
+
+.air-quality {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.5rem;
+  justify-items: center;
+}
+
+.air-quality p {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+small {
+  opacity: 0.8;
+}

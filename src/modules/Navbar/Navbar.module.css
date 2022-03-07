@@ -1,0 +1,9 @@
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.nav-item {
+  opacity: 0.8;
+}
