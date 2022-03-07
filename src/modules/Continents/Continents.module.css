@@ -3,14 +3,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  gap: 2px;
+  gap: 1px;
 }
 
 .continents li {
   width: 100%;
   text-align: center;
   position: relative;
-  box-shadow: 0 0 0 2px var(--white-color);
+  box-shadow: 0 0 0 1px var(--white-color);
 }
 
 .continents li a {
@@ -20,6 +20,11 @@
   height: 100%;
   background-color: transparent;
   font-size: 0.9rem;
+}
+
+.continents li a:hover,
+.continents li a:active {
+  transform: scale(1.2);
 }
 
 .continents li:nth-child(4n + 1),

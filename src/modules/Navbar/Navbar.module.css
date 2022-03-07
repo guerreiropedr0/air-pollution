@@ -7,3 +7,8 @@
 .nav-item {
   opacity: 0.8;
 }
+
+.nav-icon:hover,
+.nav-icon:active {
+  transform: scale(1.2);
+}
