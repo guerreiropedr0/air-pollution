@@ -23,3 +23,31 @@
 small {
   opacity: 0.8;
 }
+
+.regions {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  border: 1px solid var(--white-color);
+  gap: 1px;
+}
+
+.regions li {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 0 1px var(--white-color);
+  cursor: pointer;
+}
+
+.regions li:nth-child(4n + 1),
+.regions li:nth-child(4n + 2) {
+  background-color: var(--secondary-pink-color);
+}
+
+.regions li p,
+.regions li small {
+  background-color: inherit;
+  pointer-events: none;
+}
