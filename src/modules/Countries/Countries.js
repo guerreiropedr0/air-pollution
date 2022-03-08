@@ -17,11 +17,11 @@ const Countries = () => {
   }, []);
 
   return (
-    // const handleClick = (country) => {
-    //   return
-    // };
     <>
-      <h1>{currentContinent}</h1>
+      <h1>
+        {continents[currentContinent]
+          && continents[currentContinent][0].continents}
+      </h1>
       <h2>
         {continents[currentContinent] && continents[currentContinent].length}
       </h2>
