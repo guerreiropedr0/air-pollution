@@ -49,14 +49,14 @@ export const allReducer = (state = initialAllState, { type, payload }) => {
               continents: continents[0],
               latlng,
             })),
-          southAmerica: payload
+          southamerica: payload
             .filter((country) => country.continents[0] === 'South America')
             .map(({ name, continents, latlng }) => ({
               name,
               continents: continents[0],
               latlng,
             })),
-          northAmerica: payload
+          northamerica: payload
             .filter((country) => country.continents[0] === 'North America')
             .map(({ name, continents, latlng }) => ({
               name,
