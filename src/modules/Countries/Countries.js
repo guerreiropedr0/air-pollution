@@ -18,13 +18,23 @@ const Countries = () => {
 
   return (
     <>
-      <h1>
-        {continents[currentContinent]
-          && continents[currentContinent][0].continents}
-      </h1>
-      <h2>
-        {continents[currentContinent] && continents[currentContinent].length}
-      </h2>
+      <section className={styles.heading}>
+        <img
+          className={styles.placeholder}
+          src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+          alt="Placeholder"
+        />
+        <h1>
+          {continents[currentContinent]
+            && continents[currentContinent][0].continents.toUpperCase()}
+          <br />
+          <span>
+            {continents[currentContinent]
+              && continents[currentContinent].length}
+          </span>
+        </h1>
+      </section>
+      <h2 className={styles.title}>Countries:</h2>
       <ul className={styles['countries-grid']}>
         {continents[currentContinent]
           && continents[currentContinent].map(({ name }) => (

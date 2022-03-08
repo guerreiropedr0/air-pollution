@@ -1,5 +1,19 @@
+.heading {
+  height: 200px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.heading h1 {
+  font-family: var(--gill-sans-font) !important;
+}
+
+.placeholder {
+  width: 70vw;
+}
+
 .countries-grid {
-  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
@@ -30,4 +44,11 @@
 .countries-grid li:nth-child(4n + 1),
 .countries-grid li:nth-child(4n + 2) {
   background-color: var(--secondary-pink-color);
+}
+
+.title {
+  font-size: 1.1rem;
+  font-family: var(--gill-sans-font);
+  padding: 0 0.5rem;
+  background-color: var(--tertiary-pink-color);
 }
