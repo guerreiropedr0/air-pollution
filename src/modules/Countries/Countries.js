@@ -37,9 +37,14 @@ const Countries = () => {
       <h2 className={styles.title}>Countries:</h2>
       <ul className={styles['countries-grid']}>
         {continents[currentContinent]
-          && continents[currentContinent].map(({ name }) => (
+          && continents[currentContinent].map(({ name, latlng }) => (
             <li key={name.common}>
-              <NavLink to={countryToPath(name.common)}>{name.common}</NavLink>
+              <NavLink
+                id={`${latlng[0]} ${latlng[1]}`}
+                to={countryToPath(name.common)}
+              >
+                {name.common}
+              </NavLink>
             </li>
           ))}
       </ul>
