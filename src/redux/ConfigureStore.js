@@ -1,11 +1,9 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import { continentReducer } from './continents/continents';
 import fetchAll, { allReducer } from './worldwide/worldwide';
 
 const reducer = combineReducers({
-  continentReducer,
   allReducer,
 });
 

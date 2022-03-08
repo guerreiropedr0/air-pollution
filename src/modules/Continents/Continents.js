@@ -1,6 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import fetchContinent from '../../redux/continents/continents';
 import styles from './Continents.module.css';
 
 const Continents = () => {
@@ -39,10 +38,8 @@ const Continents = () => {
     },
   ];
 
-  const dispatch = useDispatch();
-
   const handleClick = (continent) => {
-    dispatch(fetchContinent(continent));
+    console.log(continent);
   };
 
   return (
