@@ -4,38 +4,7 @@ import fetchContinent from '../../redux/continents/continents';
 import styles from './Continents.module.css';
 
 const Continents = () => {
-  const state = useSelector((state) => state.allReducer.countries);
-
-  const europeCountries = state.filter(
-    ({ continents }) => continents === 'Europe',
-  );
-
-  const asiaCountries = state.filter(({ continents }) => continents === 'Asia');
-
-  const southAmericaCountries = state.filter(
-    ({ continents }) => continents === 'South America',
-  );
-
-  const northAmericaCountries = state.filter(
-    ({ continents }) => continents === 'North America',
-  );
-
-  const africaCountries = state.filter(
-    ({ continents }) => continents === 'Africa',
-  );
-
-  const oceaniaCountries = state.filter(
-    ({ continents }) => continents === 'Oceania',
-  );
-
-  const continentsNumbers = [
-    africaCountries.length,
-    asiaCountries.length,
-    southAmericaCountries.length,
-    northAmericaCountries.length,
-    europeCountries.length,
-    oceaniaCountries.length,
-  ];
+  const continents = useSelector((state) => Object.values(state.allReducer.continents));
 
   const links = [
     {
@@ -87,7 +56,7 @@ const Continents = () => {
             {text}
           </NavLink>
           <small>
-            {continentsNumbers[id]}
+            {continents[id] && continents[id].length}
             {' '}
             countries
           </small>

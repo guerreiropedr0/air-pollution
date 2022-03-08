@@ -18,7 +18,7 @@ const fetchAllFailure = (error) => ({
 
 const initialAllState = {
   loading: false,
-  countries: [],
+  continents: {},
   error: '',
 };
 
@@ -34,11 +34,44 @@ export const allReducer = (state = initialAllState, { type, payload }) => {
       return {
         ...state,
         loading: false,
-        countries: payload.map(({ name, continents, latlng }) => ({
-          name,
-          continents: continents[0],
-          latlng,
-        })),
+        continents: {
+          africa: payload
+            .filter((country) => country.continents[0] === 'Africa')
+            .map(({ name, continents, latlng }) => ({
+              name,
+              continents: continents[0],
+              latlng,
+            })),
+          asia: payload.filter((country) => country.continents[0] === 'Asia'),
+          southAmerica: payload
+            .filter((country) => country.continents[0] === 'South America')
+            .map(({ name, continents, latlng }) => ({
+              name,
+              continents: continents[0],
+              latlng,
+            })),
+          northAmerica: payload
+            .filter((country) => country.continents[0] === 'North America')
+            .map(({ name, continents, latlng }) => ({
+              name,
+              continents: continents[0],
+              latlng,
+            })),
+          europe: payload
+            .filter((country) => country.continents[0] === 'Europe')
+            .map(({ name, continents, latlng }) => ({
+              name,
+              continents: continents[0],
+              latlng,
+            })),
+          oceania: payload
+            .filter((country) => country.continents[0] === 'Oceania')
+            .map(({ name, continents, latlng }) => ({
+              name,
+              continents: continents[0],
+              latlng,
+            })),
+        },
         error: '',
       };
 

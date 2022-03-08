@@ -12,11 +12,12 @@ const Countries = () => {
 
   return (
     <ul className={styles['countries-grid']}>
-      {countries.map(({ name }) => (
+      {countries.map(({ name, latlng }) => (
         <li key={name.common}>
           <NavLink
             onClick={(event) => handleClick(event.target.textContent)}
             to={countryToPath(name.common)}
+            id={`${latlng[0]} ${latlng[1]}`}
           >
             {name.common}
           </NavLink>
