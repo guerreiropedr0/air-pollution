@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+:root {
+  --primary-pink-color: #ec4c8a;
+  --secondary-pink-color: #ce4176;
+  --tertiary-pink-color: #dd4682;
+  --forth-pink-color: #f4508f;
+  --primary-blue-color: #4369b2;
+  --secondary-blue-color: #3f62a4;
+  --white-color: #fff;
+  --lato-font: 'Lato', sans-serif;
+  --gill-sans-font:
+    'Gill Sans',
+    'Gill Sans MT',
+    calibri,
+    'Trebuchet MS',
+    sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -6,5 +25,9 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  color: inherit;
+  color: var(--white-color);
+  background-color: var(--primary-pink-color);
+  font-family: var(--lato-font);
+  border: none;
+  outline: none;
 }

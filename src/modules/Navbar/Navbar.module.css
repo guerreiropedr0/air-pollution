@@ -1,0 +1,14 @@
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.nav-item {
+  opacity: 0.8;
+}
+
+.nav-icon:hover,
+.nav-icon:active {
+  transform: scale(1.2);
+}
