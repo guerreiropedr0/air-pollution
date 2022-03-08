@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import styles from './Countries.module.css';
+import countryToPath from '../Helpers/helper';
 
 const Countries = () => {
   const countries = useSelector((state) => state.continentReducer.countries);
@@ -15,7 +16,7 @@ const Countries = () => {
         <li key={name.common}>
           <NavLink
             onClick={(event) => handleClick(event.target.textContent)}
-            to={name.common}
+            to={countryToPath(name.common)}
           >
             {name.common}
           </NavLink>
