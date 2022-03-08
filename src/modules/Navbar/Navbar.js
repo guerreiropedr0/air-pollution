@@ -9,7 +9,9 @@ const Navbar = () => {
     <nav className={styles['nav-bar']}>
       <ul className={styles['nav-links']}>
         <li className={styles['nav-icon']}>
-          <AiOutlineLeft onClick={() => navigate(-1)} />
+          {window.location.href !== 'http://localhost:3000/' && (
+            <AiOutlineLeft onClick={() => navigate(-1)} />
+          )}
         </li>
         <li className={styles['nav-item']}>2022 stats</li>
         <li className={styles['nav-icon']}>

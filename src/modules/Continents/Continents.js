@@ -1,41 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import fetchContinent from '../../redux/continents/continents';
+import currentContinent from '../../redux/current/current';
 import styles from './Continents.module.css';
+import { continentToCamelCase } from '../Helpers/helper';
 
 const Continents = () => {
-  const state = useSelector((state) => state.allReducer.countries);
-
-  const europeCountries = state.filter(
-    ({ continents }) => continents === 'Europe',
-  );
-
-  const asiaCountries = state.filter(({ continents }) => continents === 'Asia');
-
-  const southAmericaCountries = state.filter(
-    ({ continents }) => continents === 'South America',
-  );
-
-  const northAmericaCountries = state.filter(
-    ({ continents }) => continents === 'North America',
-  );
-
-  const africaCountries = state.filter(
-    ({ continents }) => continents === 'Africa',
-  );
-
-  const oceaniaCountries = state.filter(
-    ({ continents }) => continents === 'Oceania',
-  );
-
-  const continentsNumbers = [
-    africaCountries.length,
-    asiaCountries.length,
-    southAmericaCountries.length,
-    northAmericaCountries.length,
-    europeCountries.length,
-    oceaniaCountries.length,
-  ];
+  const continents = useSelector((state) => Object.values(state.allReducer.continents));
 
   const links = [
     {
@@ -73,7 +43,7 @@ const Continents = () => {
   const dispatch = useDispatch();
 
   const handleClick = (continent) => {
-    dispatch(fetchContinent(continent));
+    dispatch(currentContinent(continentToCamelCase(continent)));
   };
 
   return (
@@ -87,7 +57,7 @@ const Continents = () => {
             {text}
           </NavLink>
           <small>
-            {continentsNumbers[id]}
+            {continents[id] && continents[id].length}
             {' '}
             countries
           </small>
