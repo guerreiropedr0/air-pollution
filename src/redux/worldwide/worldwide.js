@@ -42,7 +42,13 @@ export const allReducer = (state = initialAllState, { type, payload }) => {
               continents: continents[0],
               latlng,
             })),
-          asia: payload.filter((country) => country.continents[0] === 'Asia'),
+          asia: payload
+            .filter((country) => country.continents[0] === 'Asia')
+            .map(({ name, continents, latlng }) => ({
+              name,
+              continents: continents[0],
+              latlng,
+            })),
           southAmerica: payload
             .filter((country) => country.continents[0] === 'South America')
             .map(({ name, continents, latlng }) => ({
@@ -79,7 +85,7 @@ export const allReducer = (state = initialAllState, { type, payload }) => {
       return {
         ...state,
         loading: false,
-        countries: [],
+        continents: {},
         error: payload,
       };
 
@@ -92,8 +98,8 @@ const fetchAll = () => async (dispatch) => {
   dispatch(fetchAllRequest());
   const request = await fetch('https://restcountries.com/v3.1/all');
   try {
-    const regions = await request.json();
-    dispatch(fetchAllSuccess(regions));
+    const continents = await request.json();
+    dispatch(fetchAllSuccess(continents));
   } catch (error) {
     const errorMsg = error.message;
     dispatch(fetchAllFailure(errorMsg));
