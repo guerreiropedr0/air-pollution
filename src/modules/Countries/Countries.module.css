@@ -6,7 +6,7 @@
 }
 
 .heading h1 {
-  font-family: var(--gill-sans-font) !important;
+  font-family: var(--gill-sans-font);
 }
 
 .placeholder {
@@ -41,14 +41,25 @@
   transform: scale(1.2);
 }
 
-.countries-grid li:nth-child(4n + 1),
+.countries-grid li:nth-child(4n + 1) {
+  background-color: var(--secondary-color);
+}
+
 .countries-grid li:nth-child(4n + 2) {
-  background-color: var(--secondary-pink-color);
+  background-color: var(--tertiary-color);
+}
+
+.countries-grid li:nth-child(4n + 3) {
+  background-color: var(--primary-color);
+}
+
+.countries-grid li:nth-child(4n + 4) {
+  background-color: var(--quaternary-color);
 }
 
 .title {
   font-size: 1.1rem;
   font-family: var(--gill-sans-font);
   padding: 0 0.5rem;
-  background-color: var(--tertiary-pink-color);
+  background-color: var(--tertiary-color);
 }

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato');
 
 :root {
-  --primary-pink-color: #ec4c8a;
-  --secondary-pink-color: #ce4176;
-  --tertiary-pink-color: #dd4682;
-  --forth-pink-color: #f4508f;
+  --primary-color: #eb4c89;
+  --secondary-color: #de4682;
+  --tertiary-color: #d4447b;
+  --quaternary-color: #f44f8f;
   --primary-blue-color: #4369b2;
   --secondary-blue-color: #3f62a4;
   --white-color: #fff;
@@ -26,7 +26,7 @@
   text-decoration: none;
   list-style: none;
   color: var(--white-color);
-  background-color: var(--primary-pink-color);
+  background-color: var(--primary-color);
   font-family: var(--lato-font);
   border: none;
   outline: none;

@@ -18,5 +18,3 @@ function App() {
 }
 
 export default App;
-
-// 80a504136ef8fec9a3ecbfa7bada1535
