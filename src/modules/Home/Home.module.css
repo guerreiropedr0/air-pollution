@@ -31,6 +31,7 @@ small {
   left: 50%;
   transform: translate(-50%, -30%);
 }
+
 .lds-dual-ring:after {
   content: ' ';
   display: block;
@@ -42,6 +43,7 @@ small {
   border-color: #fff transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);

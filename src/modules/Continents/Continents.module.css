@@ -43,8 +43,6 @@
   background-color: var(--quaternary-color);
 }
 
-
-
 .continents li small {
   background-color: transparent;
   pointer-events: none;
