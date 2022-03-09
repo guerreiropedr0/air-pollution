@@ -1,8 +1,6 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import currentContinent from '../../redux/current/current';
 import styles from './Continents.module.css';
-import { continentToCamelCase } from '../Helpers/helper';
 
 const Continents = () => {
   const continents = useSelector((state) => Object.values(state.allReducer.continents));
@@ -40,22 +38,11 @@ const Continents = () => {
     },
   ];
 
-  const dispatch = useDispatch();
-
-  const handleClick = (continent) => {
-    dispatch(currentContinent(continentToCamelCase(continent)));
-  };
-
   return (
     <ul className={styles.continents}>
       {links.map(({ path, text, id }) => (
         <li key={text}>
-          <NavLink
-            onClick={(event) => handleClick(event.target.textContent)}
-            to={path}
-          >
-            {text}
-          </NavLink>
+          <NavLink to={path}>{text}</NavLink>
           <small>
             {continents[id] && continents[id].length}
             {' '}

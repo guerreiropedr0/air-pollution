@@ -27,9 +27,20 @@
   transform: scale(1.2);
 }
 
-.continents li:nth-child(4n + 1),
+.continents li:nth-child(4n + 1) {
+  background-color: var(--secondary-color);
+}
+
 .continents li:nth-child(4n + 2) {
-  background-color: var(--secondary-pink-color);
+  background-color: var(--tertiary-color);
+}
+
+.continents li:nth-child(4n + 3) {
+  background-color: var(--primary-color);
+}
+
+.continents li:nth-child(4n + 4) {
+  background-color: var(--quaternary-color);
 }
 
 .continents li small {

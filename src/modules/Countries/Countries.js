@@ -1,8 +1,9 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import styles from './Countries.module.css';
-import { countryToPath } from '../Helpers/helper';
+import countryToPath from '../Helpers/helper';
+import fetchCountryPollution from '../../redux/polution/polution';
 
 const Countries = () => {
   const continents = useSelector((state) => state.allReducer.continents);
@@ -15,6 +16,11 @@ const Countries = () => {
     );
     setCurrentContinent(current);
   }, []);
+
+  const dispatch = useDispatch();
+  const handleClick = ({ id, textContent }) => {
+    dispatch(fetchCountryPollution(id.split(' '), textContent));
+  };
 
   return (
     <>
@@ -37,9 +43,15 @@ const Countries = () => {
       <h2 className={styles.title}>Countries:</h2>
       <ul className={styles['countries-grid']}>
         {continents[currentContinent]
-          && continents[currentContinent].map(({ name }) => (
+          && continents[currentContinent].map(({ name, latlng }) => (
             <li key={name.common}>
-              <NavLink to={countryToPath(name.common)}>{name.common}</NavLink>
+              <NavLink
+                id={`${latlng[0]} ${latlng[1]}`}
+                to={countryToPath(name.common)}
+                onClick={(event) => handleClick(event.target)}
+              >
+                {name.common}
+              </NavLink>
             </li>
           ))}
       </ul>
