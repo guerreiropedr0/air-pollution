@@ -1,11 +1,20 @@
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import styles from './Home.module.css';
 import Image from '../Image/Image';
 import Continents from '../Continents/Continents';
+import Search from '../Search/Search';
 
 const Home = () => {
   const state = useSelector((state) => state.allReducer);
   const AIR_QUALITY = ['Good', 'Fair', 'Moderate', 'Poor', 'Very Poor'];
+
+  const [value, setValue] = useState('');
+
+  const handleSearch = (e) => {
+    setValue(e.target.value);
+  };
+
   return (
     <main className={styles.main}>
       {state.loading ? (
@@ -15,6 +24,7 @@ const Home = () => {
           {' '}
           <Image />
           <h1 className={styles.title}>Air Quality levels:</h1>
+
           <ul className={styles['air-quality']}>
             {AIR_QUALITY.map((quality, index) => (
               <li key={quality}>
@@ -26,7 +36,8 @@ const Home = () => {
               </li>
             ))}
           </ul>
-          <Continents />
+          <Search handleSearch={handleSearch} data={value} />
+          <Continents data={value} />
         </>
       )}
     </main>
