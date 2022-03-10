@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 import styles from './Continents.module.css';
 
 const Continents = () => {
-  const continents = useSelector((state) => Object.values(state.allReducer.continents));
+  const state = useSelector((state) => state.allReducer);
+  const continents = Object.values(state.continents);
 
   const links = [
     {
@@ -44,7 +45,7 @@ const Continents = () => {
         <li key={text}>
           <NavLink to={path}>{text}</NavLink>
           <small>
-            {continents[id] && continents[id].length}
+            {!state.loading && continents[id].length}
             {' '}
             countries
           </small>

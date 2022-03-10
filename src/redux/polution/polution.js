@@ -6,7 +6,7 @@ const fetchCountryPollutionRequest = () => ({
   type: FETCH_COUNTRY_POLLUTION_REQUEST,
 });
 
-const fetchCountryPollutionSuccess = (countryPollution) => ({
+export const fetchCountryPollutionSuccess = (countryPollution) => ({
   type: FETCH_COUNTRY_POLLUTION_SUCCESSFUL,
   payload: countryPollution,
 });

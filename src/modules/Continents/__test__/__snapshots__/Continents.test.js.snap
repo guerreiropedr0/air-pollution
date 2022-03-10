@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Continents populates countries 1`] = `
+<small>
+  58
+   
+  countries
+</small>
+`;
+
+exports[`Continents renders succesfully 1`] = `
+<a
+  class=""
+  href="/africa"
+>
+  Africa
+</a>
+`;
+
+exports[`Continents renders succesfully 2`] = `
+<a
+  class=""
+  href="/asia"
+>
+  Asia
+</a>
+`;
+
+exports[`Continents renders succesfully 3`] = `
+<a
+  class=""
+  href="/southamerica"
+>
+  South America
+</a>
+`;
+
+exports[`Continents renders succesfully 4`] = `
+<a
+  class=""
+  href="/northamerica"
+>
+  North America
+</a>
+`;
+
+exports[`Continents renders succesfully 5`] = `
+<a
+  class=""
+  href="/europe"
+>
+  Europe
+</a>
+`;
+
+exports[`Continents renders succesfully 6`] = `
+<a
+  class=""
+  href="/oceania"
+>
+  Oceania
+</a>
+`;
