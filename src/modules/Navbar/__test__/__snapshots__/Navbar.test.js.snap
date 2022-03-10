@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders succesfully 1`] = `
+<li
+  class="nav-item"
+>
+  2022 stats
+</li>
+`;

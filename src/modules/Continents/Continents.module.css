@@ -47,7 +47,7 @@
   background-color: transparent;
   pointer-events: none;
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0.8;

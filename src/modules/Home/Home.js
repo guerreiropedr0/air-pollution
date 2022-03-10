@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main className={styles.main}>
       {state.loading ? (
-        <div className={styles['lds-dual-ring']} />
+        <div data-testid="spinner" className={styles['lds-dual-ring']} />
       ) : (
         <>
           {' '}

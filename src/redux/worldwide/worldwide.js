@@ -6,7 +6,7 @@ const fetchAllRequest = () => ({
   type: FETCH_ALL_REQUEST,
 });
 
-const fetchAllSuccess = (countries) => ({
+export const fetchAllSuccess = (countries) => ({
   type: FETCH_ALL_SUCCESSFUL,
   payload: countries,
 });
