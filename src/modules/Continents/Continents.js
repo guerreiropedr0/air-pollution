@@ -1,8 +1,10 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { searchFunc } from '../Helpers/helper';
 import styles from './Continents.module.css';
 
-const Continents = () => {
+const Continents = ({ data }) => {
   const state = useSelector((state) => state.allReducer);
   const continents = Object.values(state.continents);
 
@@ -41,11 +43,11 @@ const Continents = () => {
 
   return (
     <ul className={styles.continents}>
-      {links.map(({ path, text, id }) => (
-        <li key={text}>
-          <NavLink to={path}>{text}</NavLink>
+      {links.filter((link) => searchFunc(link, data)).map((item) => (
+        <li key={item.text}>
+          <NavLink to={item.path}>{item.text}</NavLink>
           <small>
-            {!state.loading && continents[id].length}
+            {!state.loading && continents[item.id].length}
             {' '}
             countries
           </small>
@@ -53,6 +55,10 @@ const Continents = () => {
       ))}
     </ul>
   );
+};
+
+Continents.propTypes = {
+  data: PropTypes.string.isRequired,
 };
 
 export default Continents;
