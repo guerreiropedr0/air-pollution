@@ -44,7 +44,7 @@ const Navbar = () => {
     <nav className={styles['nav-bar']}>
       <ul className={styles['nav-links']}>
         <li>
-          {window.location.href !== 'http://localhost:3000/' && (
+          {window.location.href !== 'http://localhost:3000/' && window.location.href !== 'guerreiropedr0-air-pollution.netlify.app' && (
             <AiOutlineLeft
               className={styles['nav-icon']}
               onClick={() => navigate(-1)}
