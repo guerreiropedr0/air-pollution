@@ -58,7 +58,7 @@ export const countryPollutionReducer = (
 const fetchCountryPollution = (latlng, countryName) => async (dispatch) => {
   dispatch(fetchCountryPollutionRequest());
   const request = await fetch(
-    `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latlng[0]}&lon=${latlng[1]}&appid=80a504136ef8fec9a3ecbfa7bada1535`,
+    `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latlng[0]}&lon=${latlng[1]}&appid=80a504136ef8fec9a3ecbfa7bada1535`,
   );
   try {
     const countryPollution = await request.json();
