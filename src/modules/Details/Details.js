@@ -33,16 +33,16 @@ const Details = () => {
       <h2 className={styles.title}>Country Air Quality Stats:</h2>
       <ul className={styles['quality-grid']}>
         {state.list
-        && Object.entries(state.list[0].components).map((component, index) => (
-          <li key={component[0]}>
-            {components[index]}
-            :
-            <br />
-            {component[1]}
-            {' '}
-            μg/m3
-          </li>
-        ))}
+          && Object.entries(state.list[0].components).map((component, index) => (
+            <li key={component[0]}>
+              {components[index]}
+              :
+              <br />
+              {component[1]}
+              {' '}
+              μg/m3
+            </li>
+          ))}
       </ul>
     </>
   );
