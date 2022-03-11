@@ -1,0 +1,54 @@
+.continents {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 1px;
+}
+
+.continents li {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 0 1px var(--white-color);
+}
+
+.continents li a {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  height: 100%;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+.continents li a:hover,
+.continents li a:active {
+  transform: scale(1.2);
+}
+
+.continents li:nth-child(4n + 1) {
+  background-color: var(--secondary-color);
+}
+
+.continents li:nth-child(4n + 2) {
+  background-color: var(--tertiary-color);
+}
+
+.continents li:nth-child(4n + 3) {
+  background-color: var(--primary-color);
+}
+
+.continents li:nth-child(4n + 4) {
+  background-color: var(--quaternary-color);
+}
+
+.continents li small {
+  background-color: transparent;
+  pointer-events: none;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
