@@ -60,3 +60,10 @@
 .quality-grid li:nth-child(4n + 4) {
   background-color: var(--quaternary-color);
 }
+
+@media only screen and (min-width: 900px) {
+  .placeholder {
+    width: initial;
+    height: 100%;
+  }
+}

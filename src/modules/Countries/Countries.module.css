@@ -13,6 +13,10 @@
   width: 70vw;
 }
 
+.contain {
+  display: flex;
+}
+
 .countries-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -62,4 +66,19 @@
   font-family: var(--gill-sans-font);
   padding: 0 0.5rem;
   background-color: var(--tertiary-color);
+}
+
+@media only screen and (min-width: 900px) {
+  .placeholder {
+    width: initial;
+    height: 100%;
+  }
+
+  .heading {
+    justify-content: center;
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

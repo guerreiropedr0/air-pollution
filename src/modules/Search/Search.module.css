@@ -1,7 +1,10 @@
 .search {
-  width: 100vw;
-  background-color: var(--secondary-color);
-  height: 5rem;
-  font-size: 3rem;
-  text-align: center;
+  padding-left: 1rem;
+  width: 100%;
+  background-color: var(--tertiary-color);
+}
+
+.search::placeholder {
+  color: var(--white-color) !important;
+  opacity: 1;
 }
